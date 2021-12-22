@@ -6,8 +6,9 @@ from advertisements.models import Advertisement
 class AdvertisementDateFilter(filters.FilterSet):
     created_at = filters.DateFromToRangeFilter()
     creator = filters.NumberFilter()
+    status = filters.CharFilter()
 
     class Meta:
         model = Advertisement
-        fields = ['created_at', 'creator']
+        fields = ['created_at', 'creator', 'status']
 
